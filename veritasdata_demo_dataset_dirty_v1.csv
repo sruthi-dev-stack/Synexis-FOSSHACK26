@@ -1,0 +1,7 @@
+﻿ID,Name,Age,Salary,Join_Date,Department
+1,Alice,25,50000,2023/01/01,HR
+2,Bob,,60000,01-02-2023,Finance
+3,Charlie,250,70000,2023-03-01,IT
+4,Alice,25,50000,2023/01/01,HR
+5,David,30,NA,2023/04/10,Marketing
+6,Emma,twenty,45000,2023/05/12,IT
