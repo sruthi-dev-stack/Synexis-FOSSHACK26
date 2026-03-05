@@ -1,0 +1,17 @@
+# Data Processing
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+
+# Web Application
+flask
+
+# Excel File Support
+openpyxl
