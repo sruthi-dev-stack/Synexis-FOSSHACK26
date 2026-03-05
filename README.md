@@ -66,4 +66,4 @@ Initial prototype development and dataset scanning modules are in progress.
 
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the GNU Affero General Public License v3.0(AGPL-3.0)
