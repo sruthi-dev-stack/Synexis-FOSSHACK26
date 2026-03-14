@@ -3,7 +3,7 @@
 > **Beginner-friendly dataset quality checker — scan, clean, and trust your data.**
 
 ## 🚀 Live Demo
-👉 **[Click here to view the live demo](https://dataguard-five.vercel.app)**
+👉 **[Click here to view the live website](https://sruthi-dev-stack.github.io/Synexis-FOSSHACK26/veritasdata_website.html)**
 
 ---
 
