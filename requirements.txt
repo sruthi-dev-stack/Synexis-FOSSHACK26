@@ -1,6 +1,8 @@
 # Data Processing
 pandas
 numpy
+openpyxl
+xlrd
 
 # Visualization
 matplotlib
@@ -9,9 +11,23 @@ plotly
 
 # Machine Learning
 scikit-learn
+xgboost
+lightgbm
+
+# Statistical Analysis
+scipy
+
+# Synthetic Data Generation
+sdv
 
 # Web Application
-flask
+fastapi
+uvicorn
+python-multipart
 
 # Excel File Support
 openpyxl
+
+# Utilities
+python-dotenv
+requests
