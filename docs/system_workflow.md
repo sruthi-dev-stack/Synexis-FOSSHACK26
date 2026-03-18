@@ -1,407 +1,221 @@
-User Opens Website
-
-        
-Upload Dataset
-(CSV / Excel / JSON / TSV / Google Sheets)
-
-• Supported formats: CSV, Excel, JSON, TSV, Google Sheets URL
-• System validates dataset structure
-• File integrity check
-• Detect corrupted or unreadable files
-• Warn if dataset contains only one column
-        
-        
-Dataset Size Validation
-
-• Detect number of rows and columns
-• Small dataset warning (<50 rows)
-• Large dataset warning (>100k rows)
-• Enable sampling mode for large datasets
-• Display dataset size summary
-Example: "32 rows · 8 columns detected"
-        
-        
-Smart Goal Selection
-
-User selects dataset purpose:
-
-• Machine Learning
-     └ Classification
-     └ Regression
-     └ Clustering
-     └ Time-Series Forecasting
-
-• Research / Analysis
-• Visualization
-
-System adapts analysis and cleaning strategy
-based on selected goal.
-        
-        
-Custom Rules Engine
-
-User-defined validation rules:
-
-• Age must be between 0–120
-• Email must follow valid format
-• Revenue cannot be negative
-• Minimum row requirement
-
-Dataset validated against:
-
-• Built-in checks
-• User-defined rules
-
-Rules can be saved and reused.
-        
-        
-Dataset Scanner
-
-Automatic dataset profiling detects:
-
-• Missing Values
-• Duplicate Records (exact + near duplicate)
-• Data Type Errors
-• Outliers (IQR + Z-score)
-• Inconsistent Formats
-• Class Imbalance / Bias Risk
-• Sparse or incomplete data
-
-Additional checks:
-
-PII Detection
-• Emails
-• Phone numbers
-• Credit cards (Luhn check)
-• National ID patterns
-• Names and addresses
-• IP addresses
-
-Data Freshness Analysis
-• Missing timestamps
-• Time gaps
-• Stale data
-• Temporal anomalies
-        
-        
-Dataset Health Score Generator
-
-Quality scores calculated:
-
-• Completeness Score
-• Consistency Score
-• Duplicate Risk Score
-• Bias Risk Score
-• Outlier Risk Score
-• Freshness Score
-
-Combined into:
-
-Overall Dataset Score (0–100)
-
-Score Levels
-• 80–100 → Excellent
-• 50–79  → Needs Improvement
-• 0–49   → Critical
-        
-        
-Column Trust Score
+ VeritasData – End-to-End Workflow
 
-Each column receives reliability score (0–100)
+This workflow represents a complete, explainable, and intelligent data quality pipeline that transforms raw datasets into reliable, machine-learning-ready data.
 
-Example:
 
-Name Column     → 95
-Salary Column   → 41
-Date Column     → 68
 
-User can filter low-trust columns.
-        
-        
-Risk & Severity Analyzer
+##  Step 1: Dataset Input
 
-Detected issues classified as:
+**User uploads dataset**
 
-• Low Risk
-• Medium Risk
-• High Risk
+Supported formats:
+- CSV
+- Excel
+- JSON
+- TSV
+- Google Sheets URL
 
-Displayed with:
+**System actions:**
+- Validates file structure
+- Checks readability and integrity
+- Detects corrupted or incomplete files
+- Displays dataset size summary (rows & columns)
 
-• affected column
-• number of rows
-• severity level
-• recommended action
-        
-        
-Visualization Dashboard
 
-Interactive visual analytics:
 
-• Missing Value Heatmap
-• Outlier Detection Box Plots
-• Data Distribution Histograms
-• Categorical Frequency Charts
-• Duplicate Summary
-• Column Statistics
-• Dataset Type Breakdown
-• Missing Value Bar Charts
-• Time-Based Anomaly Timeline
-        
-        
-Dataset Structure & Relationship Map
+##  Step 2: Dataset Context Setup
 
-Automatic column meaning detection:
+**User selects dataset purpose**
 
-Example:
+Options:
+- Machine Learning
+  - Classification
+  - Regression
+  - Clustering
+  - Time Series
+- Research / Analysis
+- Visualization
 
-DOB     → Date of Birth
-ZIP     → Location Code
-Salary  → Numeric (Currency)
+**System behavior:**
+- Adapts analysis strategy
+- Adjusts cleaning approach based on goal
 
-Additional insights:
 
-• Correlation Heatmap
-• Column Dependency Analysis
-• Possible Foreign Key Detection
-        
-        
-Explain Issues (Plain Language)
 
-Every issue explained simply.
+## Step 3: Custom Rule Configuration (Optional)
 
-Example:
+**User defines validation rules**
 
-"Column Age contains 12 empty values.
-Machine learning models may produce incorrect
-predictions if this issue is not resolved."
-        
-        
-AI Dataset Story Generator
+Examples:
+- Age must be between 0–120
+- Revenue cannot be negative
+- Email must follow valid format
 
-AI produces a dataset narrative:
+**System actions:**
+- Combines built-in checks with user-defined rules
+- Allows rule reuse across datasets
 
-Example:
 
-"Your dataset contains 1,200 records across
-9 columns. 143 rows contain missing values
-and 20 duplicate rows were detected.
-The Gender column shows a 92% male imbalance,
-which may introduce bias in machine learning."
-        
-        
-Smart Cleaning Suggestions
 
-Recommended fixes for each issue.
+##  Step 4: Dataset Profiling & Scanning
 
-Example:
+**System performs automatic analysis**
 
-Missing values in Age column:
+Detects:
+- Missing values
+- Duplicate records (exact + near duplicates)
+- Data type inconsistencies
+- Outliers (IQR + Z-score)
+- Class imbalance and bias risk
+- Sparse or incomplete data
 
-• Fill with Median
-• Remove Rows
-• Predict Using Regression
+**Advanced checks:**
+- PII detection (emails, phone numbers, IDs)
+- Time-based anomalies and data freshness issues
 
-Each option includes:
 
-• advantages
-• risks
-• recommended choice
-        
-        
-What-If Cleaning Simulator
 
-User tests cleaning strategies before applying.
+##  Step 5: Quality Scoring
 
-Controls:
+**System generates dataset health score**
 
-• Remove Outliers
-• Fill Missing Values
-• Remove Duplicate Rows
-• Drop Low-Trust Columns
+Metrics:
+- Completeness
+- Consistency
+- Duplicate Risk
+- Bias Risk
+- Outlier Risk
 
-Simulator shows estimated:
+**Output:**
+- Overall Dataset Score (0–100)
+- Column-level trust scores
 
-• new dataset health score
-• new dataset size
-• predicted ML accuracy
-        
-        
-Cleaning Preview Confirmation
 
-Before applying cleaning, system shows preview.
 
-Example:
+##  Step 6: Insights & Explanation
 
-"5 extreme values detected in Salary column."
+**System explains detected issues**
 
-User options:
+Provides:
+- Severity levels (Low / Medium / High)
+- Affected columns and rows
+- Plain-language explanations
 
-• Keep values
-• Cap values
-• Remove rows
+**AI-generated insights:**
+- Dataset story summary
+- Risk overview
 
-User must confirm all actions.
-        
-        
-Auto Clean Dataset
 
-Confirmed actions applied:
 
-• Remove duplicate records
-• Fill missing values
-• Fix datatype inconsistencies
-• Handle outliers
-• Standardize date formats
-• Convert textual numbers to numeric values
-        
-        
-Post-Clean Summary
+##  Step 7: Visualization Layer
 
-Before vs After comparison:
+**System generates visual insights**
 
-Rows              1200 → 1180
-Missing Values     143 → 0
-Duplicates          20 → 0
-Health Score        61 → 87
-        
-        
-PII Anonymisation
+Includes:
+- Missing value heatmaps
+- Outlier box plots
+- Data distribution charts
+- Correlation heatmaps
+- Time-based anomaly visualizations
 
-If personal data detected:
 
-User options:
 
-• Mask
-• Hash
-• Tokenise
-• Remove Column
+##  Step 8: Decision Support & Simulation
 
-Compliance status updated automatically.
-        
-        
-Advanced Bias Detection
+**User explores cleaning strategies**
 
-Bias analysis includes:
+System provides:
+- Recommended fixes
+- Pros and cons of each method
 
-• Class imbalance detection
-• Intersectional bias detection
-• Feature correlation analysis
+**What-if simulation:**
+- Predicts updated dataset score
+- Estimates impact on machine learning performance
 
-Fairness metrics:
 
-• Demographic Parity
-• Equal Opportunity
-        
-        
-Synthetic Data Generator
 
-Create privacy-safe synthetic dataset.
+##  Step 9: Data Cleaning Execution
 
-User controls:
+**User confirms cleaning actions**
 
-• Target dataset size
-• Column selection
-• Privacy level (Differential Privacy ε)
-        
-        
-Synthetic Data Validator
+System applies:
+- Removal of duplicate records
+- Filling or handling missing values
+- Data type corrections
+- Outlier treatment
+- Standardization of formats
 
-Compare synthetic vs real dataset:
 
-• Correlation similarity
-• Distribution similarity
-• Statistical tests (KS Test)
 
-Example:
+## Step 10: Post-Clean Analysis
 
-"Synthetic dataset is 94% statistically
-similar to the original."
-        
-        
-ML Performance Comparison
+**System compares results**
 
-Model trained on:
+Shows:
+- Before vs After comparison
+- Improvement in health score
+- Number of issues resolved
+- Dataset size changes
 
-• Raw Dataset
-• Clean Dataset
 
-Metrics shown:
 
-Accuracy
-Precision
-Recall
-F1 Score
+##  Step 11: Privacy & Bias Handling
 
-Feature importance visualization included.
-        
-        
-Performance Explanation
+**System ensures data safety**
 
-System explains model improvement.
+Includes:
+- PII anonymization (masking, hashing, removal)
+- Bias detection and fairness analysis
+- Compliance readiness checks
 
-Example:
 
-"Precision improved by 12%.
-Recall improved by 11% after cleaning."
-        
-        
-Schema Version Comparison (Optional)
 
-Compare two dataset versions.
+##  Step 12: Advanced Enhancements (Optional)
 
-Detect:
+**System generates synthetic dataset**
 
-• column additions
-• column removals
-• datatype changes
-• health score improvements
-        
-        
-Compliance Report
+Validates:
+- Statistical similarity
+- Distribution matching
+- Correlation preservation
 
-Dataset evaluated against:
 
-• GDPR
-• HIPAA
-• ISO 8000
-• EU AI Act
 
-Compliance gaps reported with fixes.
-        
-        
-Dataset Reliability Certificate
+##  Step 13: ML Impact Evaluation
 
-Generated certificate includes:
+**System compares model performance**
 
-• Health Score
-• Bias Risk
-• PII Status
-• Compliance Status
-• Recommended Dataset Usage
-        
-        
-Data Documentation Export
+Metrics:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
 
-Generated outputs:
+**Output:**
+- Performance improvement explanation
 
-• Data Dictionary
-• Data Contract (Schema)
-• Cleaning Code (Python / R)
-• Google Colab Notebook
-        
-        
-Session Summary
 
-Final results displayed:
 
-Original Score
-Final Score
-Issues Fixed
-Rows Cleaned
-Compliance Status
+##  Step 14: Documentation & Export
 
-All files available for download.
-        
-        
-Download Clean Dataset
+**System generates outputs**
+
+Includes:
+- Cleaned dataset
+- Data dictionary
+- Schema (data contract)
+- Cleaning scripts (Python / R)
+- Google Colab notebook
+
+
+
+##  Step 15: Final Output
+
+**User downloads results**
+
+Final deliverables:
+- Clean dataset
+- Dataset health report
+- Reliability certificate
+
+
