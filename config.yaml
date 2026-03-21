@@ -1,0 +1,24 @@
+app:
+  name: VeritasData
+  version: 1.0
+
+dataset:
+  max_rows: 100000
+  min_rows_warning: 50
+
+cleaning:
+  missing_strategy: median
+  outlier_method: IQR
+
+scoring:
+  weight_completeness: 0.2
+  weight_consistency: 0.2
+  weight_duplicates: 0.2
+  weight_bias: 0.2
+  weight_outliers: 0.2
+
+ml:
+  models:
+    - logistic_regression
+    - random_forest
+    - xgboost
