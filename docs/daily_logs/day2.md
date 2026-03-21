@@ -1,4 +1,4 @@
-# 📅 Development Log — Day 2
+#  Development Log — Day 2
 
 - Defined problem statement
 - Created solution overview
